@@ -1,0 +1,17 @@
+package ${package}.rest;
+
+import ${package}.entity.${className};
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+/**
+ * ${comments}
+ *
+ * @author ${author}
+ * Created in ${datetime}
+ */
+@Controller
+@RequestMapping("${secondModuleName}" )
+public class ${className}Controller {
+
+}

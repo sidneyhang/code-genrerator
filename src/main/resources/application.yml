@@ -1,0 +1,26 @@
+# Tomcat
+server:
+  tomcat:
+    max-threads: 10
+    min-spare-threads: 10
+  port: 8981
+
+# mysql
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.100.70:3306/sunxing_comment?useUnicode=true&characterEncoding=UTF-8
+    username: dev
+    password: sunxing321
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+
+# Mybatis≈‰÷√
+mybatis:
+  mapperLocations: classpath:mapper/**/*.xml
+

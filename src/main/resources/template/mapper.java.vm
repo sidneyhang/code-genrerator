@@ -1,0 +1,14 @@
+package ${package}.mapper;
+
+import ${package}.entity.${className};
+import tk.mybatis.mapper.common.Mapper;
+
+/**
+ * ${comments}
+ * 
+ * @author ${author}
+ * Created in ${datetime}
+ */
+public interface ${className}Mapper extends Mapper<${className}> {
+	
+}
