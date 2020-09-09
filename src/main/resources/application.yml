@@ -1,8 +1,9 @@
 # Tomcat
 server:
   tomcat:
-    max-threads: 10
-    min-spare-threads: 10
+    threads:
+      max: 10
+      min-spare: 10
   port: 8981
 
 # mysql
