@@ -35,7 +35,7 @@ public class GeneratorRest {
     public TableResultResponse<Map<String, Object>> list(@RequestParam Map<String, Object> params) {
         List<Map<String, Object>> result = generatorService.queryList(params);
         int total = generatorService.queryTotal(params);
-        return new TableResultResponse<Map<String, Object>>(total, result);
+        return new TableResultResponse<>(total, result);
     }
 
     /**

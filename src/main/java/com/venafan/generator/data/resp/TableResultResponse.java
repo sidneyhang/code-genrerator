@@ -37,7 +37,7 @@ public class TableResultResponse<T> extends BaseResponse {
         this.data = data;
     }
 
-    class TableData<T> {
+    static class TableData<T> {
         long total;
         List<T> rows;
 

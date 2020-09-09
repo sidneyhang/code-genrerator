@@ -1,7 +1,9 @@
 package com.venafan.generator.data.resp;
 
 /**
- * Created by ace on 2017/8/23.
+ * @author yanghang
+ * @version V1.0
+ * Created in 2020-05-01 10:26
  */
 public class BaseResponse {
     private int code = 200;
@@ -30,6 +32,4 @@ public class BaseResponse {
     public void setCode(int code) {
         this.code = code;
     }
-
-
 }

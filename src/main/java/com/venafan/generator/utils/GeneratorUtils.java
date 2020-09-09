@@ -28,8 +28,6 @@ public class GeneratorUtils {
 
     public static List<String> getTemplates() {
         List<String> templates = new ArrayList<>();
-//        templates.add("template/index.js.vm");
-//        templates.add("template/index.vue.vm");
         templates.add("template/mapper.xml.vm");
         templates.add("template/dao.java.vm");
         templates.add("template/service.java.vm");
@@ -170,18 +168,12 @@ public class GeneratorUtils {
         if (StringUtils.isNotBlank(packageName)) {
             packagePath += packageName.replace(".", File.separator) + File.separator;
         }
-
         if (template.contains("index.js.vm")) {
             return frontPath + "api" + File.separator + moduleName + File.separator + toLowerCaseFirstOne(className) + File.separator + "index.js";
         }
-
         if (template.contains("index.vue.vm")) {
             return frontPath + "views" + File.separator + moduleName + File.separator + toLowerCaseFirstOne(className) + File.separator + "index.vue";
         }
-
-//        if (template.contains("biz.java.vm")) {
-//            return packagePath + "biz" + File.separator + className + "Biz.java";
-//        }
         if (template.contains("dao.java.vm")) {
             return packagePath + "dao" + File.separator + className + "Dao.java";
         }
@@ -209,7 +201,7 @@ public class GeneratorUtils {
         if (Character.isLowerCase(s.charAt(0))) {
             return s;
         } else {
-            return (new StringBuilder()).append(Character.toLowerCase(s.charAt(0))).append(s.substring(1)).toString();
+            return Character.toLowerCase(s.charAt(0)) + s.substring(1);
         }
     }
 }
