@@ -15,9 +15,8 @@ import java.math.BigDecimal;
  * Created in ${datetime}
  */
 @Table(name = "${tableName}")
-public class ${className} implements Serializable {
-	private static final long serialVersionUID = 1L;
-	
+public class ${className} {
+
 #foreach ($column in $columns)
 	#if($column.columnName == $pk.columnName)
     /**
@@ -30,7 +29,7 @@ public class ${className} implements Serializable {
 	/**
 	 * $column.comments
 	 */
-    @Column(name = "$column.columnName")
+    @Column(name = "`$column.columnName`")
     private $column.attrType $column.attrname;
 	#end
 

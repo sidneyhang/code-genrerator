@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created in ${datetime}
  */
 @Controller
-@RequestMapping("${secondModuleName}" )
+@RequestMapping("${secondModuleName}")
 public class ${className}Controller {
 
 }

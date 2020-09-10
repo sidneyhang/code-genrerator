@@ -143,7 +143,7 @@ public class GeneratorUtils {
      */
     public static String tableToJava(String tableName, String tablePrefix) {
         if (StringUtils.isNotBlank(tablePrefix)) {
-            tableName = tableName.replace(tablePrefix, "");
+            tableName = tableName.replaceFirst(tablePrefix, "");
         }
         return columnToJava(tableName);
     }
@@ -169,10 +169,12 @@ public class GeneratorUtils {
             packagePath += packageName.replace(".", File.separator) + File.separator;
         }
         if (template.contains("index.js.vm")) {
-            return frontPath + "api" + File.separator + moduleName + File.separator + toLowerCaseFirstOne(className) + File.separator + "index.js";
+            return frontPath + "api" + File.separator + moduleName +
+                    File.separator + toLowerCaseFirstOne(className) + File.separator + "index.js";
         }
         if (template.contains("index.vue.vm")) {
-            return frontPath + "views" + File.separator + moduleName + File.separator + toLowerCaseFirstOne(className) + File.separator + "index.vue";
+            return frontPath + "views" + File.separator + moduleName +
+                    File.separator + toLowerCaseFirstOne(className) + File.separator + "index.vue";
         }
         if (template.contains("dao.java.vm")) {
             return packagePath + "dao" + File.separator + className + "Dao.java";
@@ -190,7 +192,8 @@ public class GeneratorUtils {
             return packagePath + "rest" + File.separator + className + "Controller.java";
         }
         if (template.contains("mapper.xml.vm")) {
-            return "main" + File.separator + "resources" + File.separator + "mapper" + File.separator + className + "Mapper.xml";
+            return "main" + File.separator + "resources" +
+                    File.separator + "mapper" + File.separator + className + "Mapper.xml";
         }
 
         return null;

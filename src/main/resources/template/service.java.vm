@@ -4,8 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import ${package}.entity.${className};
-import ${package}.mapper.${className}Dao;
-import ${package}.common.BaseDao;
+import ${package}.dao.${className}Dao;
 
 /**
  * ${comments}
@@ -16,6 +15,6 @@ import ${package}.common.BaseDao;
 @Service
 public class ${className}Service {
     @Autowired
-    private ${className}Dao ${className}Dao;
+    private ${className}Dao ${classname}Dao;
 
 }

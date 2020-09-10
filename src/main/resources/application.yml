@@ -11,7 +11,7 @@ spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
     driverClassName: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://192.168.100.70:3306/sunxing_comment?useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://192.168.100.70:3306/auto_test?useUnicode=true&characterEncoding=UTF-8&useSSL=false
     username: dev
     password: sunxing321
   jackson:
@@ -21,7 +21,7 @@ spring:
     mode: LEGACYHTML5
     cache: false
 
-# Mybatis≈‰÷√
+# Mybatis
 mybatis:
   mapperLocations: classpath:mapper/**/*.xml
 
